@@ -1,0 +1,7 @@
+#想被git忽略的檔案放此
+
+# Node Modules
+/node_modules
+
+#打包輸出
+/dist

@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "sourceMap": true,
+    "target": "ES5",
+    "lib": ["es2016", "dom"],
+    "noImplicitAny": true,
+    "removeComments": true,
+    "module": "commonjs",
+    "jsx": "react",
+    "allowJs": true,
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@root/*": ["./src/*"]
+    },
+    "resolveJsonModule": true,
+    "downlevelIteration": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules/**/*"],
+  "compileOnSave": true
+}
