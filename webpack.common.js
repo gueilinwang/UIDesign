@@ -54,6 +54,7 @@ module.exports = {
     },
     hot: "only",
   },
+  devtool: "eval-cheap-module-source-map",
   resolve: {
     extensions: [".js", ".ts", ".tsx"],
   },

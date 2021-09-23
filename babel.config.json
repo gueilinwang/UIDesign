@@ -3,12 +3,12 @@
     [
       "@babel/preset-env",
       {
-        "targets": {
-          "browsers": ["last 2 versions", "not ie < 11"]
-        }
+        // "targets": {
+        //   "browsers": ["last 2 versions", "not ie < 11"]
+        // }
         // "useBuiltIns": "usage" 只有使用到的polyfill才會被引入,減少打包容量
       }
-    ] 
+    ]
     // "@babel/react"
   ],
   "plugins": [
@@ -18,7 +18,7 @@
     [
       "@babel/plugin-transform-runtime",
       {
-        "corejs": false,
+        "corejs": 3,
         "helpers": true,
         "regenerator": true,
         "useESModules": false
