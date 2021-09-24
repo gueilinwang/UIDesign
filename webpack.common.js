@@ -1,6 +1,7 @@
 const path = require("path")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
+const { CleanWebpackPlugin } = require("clean-webpack-plugin")
 const webpack = require("webpack")
 module.exports = {
   mode: "development",
@@ -56,7 +57,7 @@ module.exports = {
   },
   devtool: "eval-cheap-module-source-map",
   resolve: {
-    extensions: [".js", ".ts", ".tsx"],
+    extensions: [".js", ".ts", ".tsx", ".jsx"],
   },
   plugins: [
     new MiniCssExtractPlugin(),
@@ -65,5 +66,6 @@ module.exports = {
       filename: "./preview.html",
     }),
     new webpack.HotModuleReplacementPlugin(),
+    new CleanWebpackPlugin(),
   ],
 }

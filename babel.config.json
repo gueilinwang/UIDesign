@@ -8,8 +8,8 @@
         // }
         // "useBuiltIns": "usage" 只有使用到的polyfill才會被引入,減少打包容量
       }
-    ]
-    // "@babel/react"
+    ],
+    "@babel/preset-react"
   ],
   "plugins": [
     //   "@babel/plugin-transform-object-assign",
