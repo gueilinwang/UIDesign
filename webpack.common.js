@@ -68,4 +68,7 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin(),
   ],
+  optimization: {
+    usedExports: true,
+  },
 }
