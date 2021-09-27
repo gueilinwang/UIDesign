@@ -2,9 +2,7 @@ const path = require("path")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const HTMLWebpackPlugin = require("html-webpack-plugin")
 const { CleanWebpackPlugin } = require("clean-webpack-plugin")
-const webpack = require("webpack")
 module.exports = {
-  mode: "development",
   entry: {
     bundle: "./src/index.js",
   },
@@ -46,16 +44,6 @@ module.exports = {
       },
     ],
   },
-  devServer: {
-    static: "./dist",
-    open: true,
-    proxy: {},
-    client: {
-      progress: true,
-    },
-    hot: "only",
-  },
-  devtool: "eval-cheap-module-source-map",
   resolve: {
     extensions: [".js", ".ts", ".tsx", ".jsx"],
   },
@@ -65,7 +53,6 @@ module.exports = {
       template: "./preview.html",
       filename: "./preview.html",
     }),
-    new webpack.HotModuleReplacementPlugin(),
     new CleanWebpackPlugin(),
   ],
   optimization: {
