@@ -6,7 +6,7 @@ const devConfig = {
   devtool: "eval-cheap-module-source-map",
   devServer: {
     static: "./dist",
-    open: true,
+    open: ["/preview.html"],
     proxy: {},
     client: {
       progress: true,

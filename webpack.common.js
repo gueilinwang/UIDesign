@@ -8,6 +8,7 @@ module.exports = {
   },
   output: {
     filename: "[name].js",
+    chunkFilename: "[name].chunk.js",
     path: path.resolve(__dirname, "dist"),
     assetModuleFilename: "./images/[name][ext]",
     clean: true,
@@ -57,7 +58,7 @@ module.exports = {
   ],
   optimization: {
     usedExports: true, //tree shakings
-    //代碼分割
+    // 代碼分割
     splitChunks: {
       chunks: "all", //'async:只對非同步代碼進行分割;initial只對同步代碼進行分割'
       minSize: 20000, // >20kb才做分割
@@ -71,10 +72,9 @@ module.exports = {
           test: /[\\/]node_modules[\\/]/,
           priority: -10,
           reuseExistingChunk: true, //如果一個模塊之前已經被打包分割過了,則不會再去做額外的分割
-          filename: "vendor.js",
         },
         default: {
-          minChunks: 1,
+          minChunks: 2,
           priority: -20,
           reuseExistingChunk: true,
         },
